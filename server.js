@@ -9,6 +9,8 @@ mongoose.connect('mongodb://localhost:27017/apiHomeWork').then((res)=>{
 });
 mongoose.set('strictQuery', true);
 
-app.listen(3200 , ()=>{
+const port = process.env.PORT;
+
+app.listen(port , ()=>{
     console.log('server is running on port 3200');
 });
