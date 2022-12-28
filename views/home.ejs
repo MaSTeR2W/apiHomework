@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap'); </style>
+        
+    <link rel="stylesheet" href="/style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>API documentaion</title>
+</head>
+<body>
+    <div style="background: #f8f9fa;">
+        <div class="responsive-width mx-auto">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand nav-link fs-5 fw-semibold" href="/">Employees API documentation</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link" href="/">Home</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <hr class="mt-0">
+    <div class="responsive-width mx-auto px-3">
+        <h6 class="fs-4 fw-bolder mt-5">Introduction</h6>
+        <p class="fs-5 mt-4">To Use this API, you can do one of the following:-</p>
+        <p class="fs-6">1- use Postman to make GET, POST, PATCH and DELETE request.</p>
+        <p class="fs-6">2- create your own website and use ajax to make GET, POST, PATCH and DELETE request.</p>
+        <h1 class="fs-4 fw-bolder mt-5">Employees API</h1>
+        <p class="fs-6">The following table shows URLs and Methods</p>
+        <div class="row w-100 mx-0 px-0 mt-3 gx-0">
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6 fw-semibold">Method</p></div>
+            <div class="col col-4"><p class="text-center fs-6 fw-semibold">URL</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6 fw-semibold">Description</p></div>
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6">GET</p></div>
+            <div class="col col-4"><p class="text-center fs-6">~/api /employees</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6">Get all employees from the Database</p></div>
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6">GET</p></div>
+            <div class="col col-4"><p class="text-center fs-6">~/api /employees/ :id</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6">Get a specific employee from the Database</p></div>
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6">POST</p></div>
+            <div class="col col-4"><p class="text-center fs-6">~/api /employees</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6">Create new employee</p></div>
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6">PATCH</p></div>
+            <div class="col col-4"><p class="text-center fs-6">~/api /employees/ :id</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6">Update employee properties</p></div>
+            <div class="col col-3 col-sm-2"><p class="text-center fs-6">DELETE</p></div>
+            <div class="col col-4"><p class="text-center fs-6">~/api /employees/ :id</p></div>
+            <div class="col col-5 col-sm-6"><p class="text-center fs-6">Delete an existing employee</p></div>
+        </div>   
+        <p class="fs-6 mt-5">The following table shows the properties of The Employee and its rules</p> 
+        <div class="row w-100 mx-0 px-0 mt-3 mb-5 gx-0">
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6 fw-semibold">Property</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6 fw-semibold">rule</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">Id</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">String, auto generated</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">Name</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">String, Required</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">Position</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">String, Required, must be one of ('موظف' , 'مدير' , 'مساعد مدير')</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">Age</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">Number, Required, age >= 14, age<= 60</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">Salary</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">Number, Required, salary >= 0</p></div>
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6">DepartmentID</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6">String, Required</p></div>
+        </div>    
+         <p class="fs-6 mt-5">The following table shows the ID values for each Department</p> 
+        <div class="row w-100 mx-0 px-0 mt-3 mb-5 gx-0">
+            <div class="col col-5 col-sm-4"><p class="text-center fs-6 fw-semibold">Department Name</p></div>
+            <div class="col col-7 col-sm-8"><p class="text-center fs-6 fw-semibold">Department ID</p></div>
+            <% for( let index = 0; index < departments.length; index++ ) { %>
+              <div class="col col-5 col-sm-4"><p class="text-center fs-6"><%=departments[index].departmentName %></p></div>
+              <div class="col col-7 col-sm-8"><p class="text-center fs-6"><%=departments[index]._id%></p></div>
+            <% } %>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</html>
